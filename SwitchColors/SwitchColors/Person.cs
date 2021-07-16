@@ -9,7 +9,7 @@ namespace SwitchColors
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public bool ChangeColor { get; set; } 
+        public bool ChangeColor { get; set; }
         public Person(string first,string last)
         {
             this.FirstName = first;
@@ -25,4 +25,5 @@ namespace SwitchColors
             this.ChangeColor = false; 
         }
     }
+      
 }

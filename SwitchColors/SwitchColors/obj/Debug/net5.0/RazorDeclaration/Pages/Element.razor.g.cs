@@ -99,7 +99,7 @@ using System.Collections.Generic;
 #nullable restore
 #line 22 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
        
-
+    static int i;
     public List<Person> Persons = new List<Person>();
     private Person e1 = new Person("Emna", "BenAyed");
     private Person e2 = new Person("Khaldoun", "Aissaoui");
@@ -107,25 +107,21 @@ using System.Collections.Generic;
     private Person e4 = new Person("Salim", "Aissaoui");
     protected override Task OnInitializedAsync()
     {
+
         Persons.Add(e1);
         Persons.Add(e2);
         Persons.Add(e3);
         Persons.Add(e4);
         return base.OnInitializedAsync();
     }
-
-    static int i;
+   
     void SwitchColor()
     {
         if (i < Persons.Count)
-            Persons[i].ChangeColor = true; 
+            Persons[i].ChangeColor = true;
+    }
 
-#line default
-#line hidden
-#nullable disable
-#nullable restore
-#line 44 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
-      }
+
 
 #line default
 #line hidden

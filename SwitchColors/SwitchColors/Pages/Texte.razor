@@ -1,0 +1,44 @@
+﻿@page "/Texte"
+<h3>Texte</h3>
+
+<div class="texte1">hello word</div>
+<button @onclick="afficher1">1</button>
+@if (affiche1 == true)
+{
+    <style>
+        .texte1 {
+            visibility: visible;
+        }
+    </style>
+}
+<div class="texte2">hello word</div>
+
+<button @onclick="afficher2">2</button>
+@if (affiche2 == true)
+{
+    <style>
+        .texte2 {
+            visibility: visible;
+        }
+    </style>
+}
+@code {
+    static bool affiche1 = false;
+    static bool affiche2 = false;
+
+    public void afficher1()
+    {
+        affiche1 = true;
+        if (affiche2 == true)
+            affiche2 = false;
+    }
+
+    public void afficher2()
+    {
+        affiche2 = true;
+        if (affiche1 == true)
+            affiche1 = false;
+
+    }
+
+}

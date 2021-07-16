@@ -1,0 +1,45 @@
+﻿@using System.Collections.Generic; 
+@page "/switch"
+
+<h3>Element</h3>
+
+@for(i=0 ; i< Persons.Count; i++)
+{
+<div class="presentation@(i)"> 
+    Hello ,it's @Persons[i].FirstName @Persons[i].LastName
+    <button @onclick="SwitchColor">switch</button>
+    @if (Persons[i].ChangeColor == true)
+    {
+        <style>
+            .presentation@(i) {
+                background-color: fuchsia;
+            }
+        </style>
+    }   
+</div>
+}
+
+@code {
+
+    public List<Person> Persons = new List<Person>();
+    private Person e1 = new Person("Emna", "BenAyed");
+    private Person e2 = new Person("Khaldoun", "Aissaoui");
+    private Person e3 = new Person("Hedia", "Bouricha");
+    private Person e4 = new Person("Salim", "Aissaoui");
+    protected override Task OnInitializedAsync()
+    {
+        Persons.Add(e1);
+        Persons.Add(e2);
+        Persons.Add(e3);
+        Persons.Add(e4);
+        return base.OnInitializedAsync();
+    }
+
+    static int i;
+    void SwitchColor()
+    {
+        if (i < Persons.Count)
+            Persons[i].ChangeColor = true; 
+@*        Persons[i].ChangeTheColor();
+*@    }
+}

@@ -3,24 +3,24 @@
 
 <h3>Element</h3>
 
-@for (i = 0; i < Persons.Count; i++)
+@foreach(var person in Persons)
 {
-
-    <div>Hello ,it's @Persons[i].FirstName @Persons[i].LastName</div>
-    <button @onclick="SwitchColor">switch</button>
-    @if (Persons[i].ChangeColor == true)
+<div > 
+    Hello ,it's @person.FirstName @person.LastName
+    <button @onclick="()=> Callback(person)">switch</button>
+    @if (person.ChangeColor == true)
     {
-        <div>the color was changed</div>
+        <div class="box red"></div>
     }
     else
     {
-        <div>the color was not changed</div>
+        <div class="box green"></div>
     }
-
+</div>
 }
 
 @code {
-    static int i;
+
     public List<Person> Persons = new List<Person>();
     private Person e1 = new Person("Emna", "BenAyed");
     private Person e2 = new Person("Khaldoun", "Aissaoui");
@@ -28,22 +28,27 @@
     private Person e4 = new Person("Salim", "Aissaoui");
     protected override Task OnInitializedAsync()
     {
-
         Persons.Add(e1);
         Persons.Add(e2);
         Persons.Add(e3);
         Persons.Add(e4);
         return base.OnInitializedAsync();
     }
-   
-    void SwitchColor()
+
+
+    void Callback(Person person)
     {
-        if (i < Persons.Count)
-            Persons[i].ChangeColor = true;
+        foreach (var element in Persons)
+        {
+            if (element == person)
+            {
+                person.ChangeTheColor();
+            }
+            else
+            {
+                element.Initial();
+            }
+        }
     }
 
-
 }
-
-
-

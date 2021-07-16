@@ -10,20 +10,19 @@ namespace SwitchColors
         public string FirstName { get; set; }
         public string LastName { get; set; }
         public bool ChangeColor { get; set; }
-        public Person(string first,string last)
+        public Person(string first, string last)
         {
             this.FirstName = first;
             this.LastName = last;
             this.ChangeColor = false;
         }
-        public bool ChangeTheColor()
+        public void ChangeTheColor()
         {
-            return (this.ChangeColor=true); 
+            this.ChangeColor = true;
         }
         public void Initial()
         {
-            this.ChangeColor = false; 
+            this.ChangeColor = false;
         }
     }
-      
 }

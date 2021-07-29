@@ -60,9 +60,47 @@ a, .btn-link {
     visibility:hidden; 
 }
 
-.oi red{
-    color:red; 
+.table{
+    border-color: red; 
 }
- .oi green{
-     color:green; 
- }
+
+.white-cell,
+.black-cell {
+    width: 70px;
+    height: 70px;
+}
+
+.white-cell {
+    background-color:palegreen;
+}
+.black-cell {
+    background-color: black;
+}
+
+/*.parent {
+    display: grid;
+    position:fixed;
+    height: 85vh;
+    width: 80vw;
+    grid-template-columns: repeat(8,70px);
+    grid-template-rows: repeat(8,70px); 
+}*/
+
+/*
+.tetris-container {
+    display: table;
+    width: 240px;
+}
+
+.tetris-row {
+    display: table-row;
+    height: 24px;
+    width: 240px;
+}
+*/
+
+.table{
+    height: 560px ; 
+    width: 560px ; 
+}
+  

@@ -1,0 +1,43 @@
+﻿@page "/My Test"
+<h3>MyTest</h3>
+
+@foreach (var person in Persons)
+{
+    <div>
+        Hello ,it's @person.FirstName @person.LastName
+        <button @onclick="()=>switchColor(person)">switch</button>
+        @if (person.ChangeColor == true)
+        {
+            <div>the color is true</div>
+        }
+        else
+        {
+            <div>the color is false</div>
+        }
+    </div>
+}
+
+@code {
+
+    public List<Person> Persons = new List<Person>();
+    private Person e1 = new Person("Emna", "BenAyed");
+    private Person e2 = new Person("Khaldoun", "Aissaoui");
+    private Person e3 = new Person("Hedia", "Bouricha");
+    private Person e4 = new Person("Salim", "Aissaoui");
+    protected override Task OnInitializedAsync()
+    {
+        Persons.Add(e1);
+        Persons.Add(e2);
+        Persons.Add(e3);
+        Persons.Add(e4);
+        return base.OnInitializedAsync();
+    }
+
+
+    void switchColor(Person person)
+    {
+        person.ChangeTheColor(); 
+    }
+
+}
+

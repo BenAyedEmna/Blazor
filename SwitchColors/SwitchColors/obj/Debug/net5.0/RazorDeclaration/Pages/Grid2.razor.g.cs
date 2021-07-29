@@ -8,6 +8,7 @@ namespace SwitchColors.Pages
 {
     #line hidden
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
@@ -81,15 +82,8 @@ using SwitchColors.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
-using System.Collections.Generic;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/switch")]
-    public partial class Element : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Basetawteslek")]
+    public partial class Grid2 : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,38 +91,32 @@ using System.Collections.Generic;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 22 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
+#line 38 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Grid2.razor"
        
-
-    public List<Person> Persons = new List<Person>();
-    private Person e1 = new Person("Emna", "BenAyed");
-    private Person e2 = new Person("Khaldoun", "Aissaoui");
-    private Person e3 = new Person("Hedia", "Bouricha");
-    private Person e4 = new Person("Salim", "Aissaoui");
+    private Grid MyGrid = new Grid(8, 8);
     protected override Task OnInitializedAsync()
     {
-        Persons.Add(e1);
-        Persons.Add(e2);
-        Persons.Add(e3);
-        Persons.Add(e4);
+        MyGrid.CreateGrid();
         return base.OnInitializedAsync();
     }
-
-
-    void Callback(Person person)
+    static bool change = true;
+    public void feuvert()
     {
-        foreach (var element in Persons)
+        if (change == false)
         {
-            if (element == person)
-            {
-                person.ChangeTheColor();
-            }
-            else
-            {
-                element.Initial();
-            }
+            change = true;
         }
+        if (change == true)
+        {
+            change = false;
+        }
+
+    if(change==true)
+    {
+        MyGrid.ChangingColors();
     }
+}
+
 
 
 #line default

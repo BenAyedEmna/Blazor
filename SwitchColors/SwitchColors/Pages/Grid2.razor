@@ -1,0 +1,53 @@
+﻿@page "/Basetawteslek"
+
+<h3>Grid2</h3>
+<button @onclick="feuvert">change the colors</button>
+
+@if (change == true)
+{
+    <div>truuuuue</div>
+}
+else
+{
+    if (change == false)
+    {
+        <div>faaalse</div>
+    }
+}
+
+<table class="table">
+    @for (var i = 0; i < MyGrid.Column; i++)
+    {
+        <tr>
+            @for (var j = 0; j < MyGrid.Row; j++)
+            {
+                @if (MyGrid.grid[i][j].Color == colors.black)
+                {
+                    <td class="black-cell"></td>
+                }
+                else
+                {
+                    <td class="white-cell"></td>
+                }
+            }
+        </tr>
+    }
+</table>
+
+
+@code {
+    private Grid MyGrid = new Grid(8, 8);
+    protected override Task OnInitializedAsync()
+    {
+        MyGrid.CreateGrid();
+        return base.OnInitializedAsync();
+    }
+    static bool change = true;
+    public void feuvert()
+    {
+        MyGrid.ChangingColors();
+
+    }
+
+
+}

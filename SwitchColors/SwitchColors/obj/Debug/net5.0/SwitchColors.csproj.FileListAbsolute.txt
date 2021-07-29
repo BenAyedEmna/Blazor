@@ -122,5 +122,10 @@ C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5
 C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\SwitchColors.pdb
 C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\SwitchColors.genruntimeconfig.cache
 C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\SwitchColors.csproj.CopyComplete
-C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\RazorDeclaration\Pages\Test.razor.g.cs
-C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\Razor\Pages\Test.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\scopedcss\Pages\Element.razor.rz.scp.css
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\RazorDeclaration\Pages\MyTest.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\Razor\Pages\MyTest.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\RazorDeclaration\Pages\Bla.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\RazorDeclaration\Pages\Grid2.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\Razor\Pages\Bla.razor.g.cs
+C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\obj\Debug\net5.0\Razor\Pages\Grid2.razor.g.cs

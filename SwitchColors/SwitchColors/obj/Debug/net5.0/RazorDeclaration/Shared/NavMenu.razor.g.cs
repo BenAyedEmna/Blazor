@@ -90,7 +90,7 @@ using SwitchColors.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Shared\NavMenu.razor"
+#line 43 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 

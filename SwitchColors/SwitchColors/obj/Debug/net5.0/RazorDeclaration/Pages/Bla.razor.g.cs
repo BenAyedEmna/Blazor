@@ -8,6 +8,7 @@ namespace SwitchColors.Pages
 {
     #line hidden
     using System;
+    using System.Collections.Generic;
     using System.Linq;
     using System.Threading.Tasks;
     using Microsoft.AspNetCore.Components;
@@ -81,59 +82,14 @@ using SwitchColors.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 1 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
-using System.Collections.Generic;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/switch")]
-    public partial class Element : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/Grr")]
+    public partial class Bla : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 22 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Element.razor"
-       
-
-    public List<Person> Persons = new List<Person>();
-    private Person e1 = new Person("Emna", "BenAyed");
-    private Person e2 = new Person("Khaldoun", "Aissaoui");
-    private Person e3 = new Person("Hedia", "Bouricha");
-    private Person e4 = new Person("Salim", "Aissaoui");
-    protected override Task OnInitializedAsync()
-    {
-        Persons.Add(e1);
-        Persons.Add(e2);
-        Persons.Add(e3);
-        Persons.Add(e4);
-        return base.OnInitializedAsync();
-    }
-
-
-    void Callback(Person person)
-    {
-        foreach (var element in Persons)
-        {
-            if (element == person)
-            {
-                person.ChangeTheColor();
-            }
-            else
-            {
-                element.Initial();
-            }
-        }
-    }
-
-
-#line default
-#line hidden
-#nullable disable
     }
 }
 #pragma warning restore 1591

@@ -1,3 +1,17 @@
+/* _content/SwitchColors/Pages/Element.razor.rz.scp.css */
+.box[b-194xuih0f0] {
+    width: 200px;
+
+    height: 100px;
+}
+.red[b-194xuih0f0] {
+    background-color: red;
+}
+
+.green[b-194xuih0f0] {
+    background-color: green;
+
+}
 /* _content/SwitchColors/Shared/MainLayout.razor.rz.scp.css */
 .page[b-jz1pom30br] {
     position: relative;

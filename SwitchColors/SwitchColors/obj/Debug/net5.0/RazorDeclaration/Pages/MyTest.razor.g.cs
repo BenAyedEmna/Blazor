@@ -82,15 +82,8 @@ using SwitchColors.Shared;
 #line default
 #line hidden
 #nullable disable
-#nullable restore
-#line 2 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Test.razor"
-using System.Threading;
-
-#line default
-#line hidden
-#nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/Test")]
-    public partial class Test : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/My Test")]
+    public partial class MyTest : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,22 +91,29 @@ using System.Threading;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\Test.razor"
-            
-    private int Count { get; set; } = 10;
+#line 20 "C:\Users\ASUS\Desktop\Emna\stage\Blazor\SwitchColors\SwitchColors\Pages\MyTest.razor"
+       
 
-    void StartCountdown()
+    public List<Person> Persons = new List<Person>();
+    private Person e1 = new Person("Emna", "BenAyed");
+    private Person e2 = new Person("Khaldoun", "Aissaoui");
+    private Person e3 = new Person("Hedia", "Bouricha");
+    private Person e4 = new Person("Salim", "Aissaoui");
+    protected override Task OnInitializedAsync()
     {
-        var timer = new Timer(new TimerCallback(_ =>
-        {
-            if (Count <= 0) return;
-            Count--;
-
-        // Note that the following line is necessary because otherwise
-        // Blazor would not recognize the state change and not refresh the UI
-        Count.StateHasChanged();
-        }), null, 1000, 1000);
+        Persons.Add(e1);
+        Persons.Add(e2);
+        Persons.Add(e3);
+        Persons.Add(e4);
+        return base.OnInitializedAsync();
     }
+
+
+    void switchColor(Person person)
+    {
+        person.ChangeTheColor(); 
+    }
+
 
 #line default
 #line hidden
